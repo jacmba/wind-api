@@ -1,0 +1,30 @@
+{
+  "name": "wind-api",
+  "version": "1.0.0",
+  "description": "Aviation wind component calculator",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "nodemodules/mocha/bin/mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacmba/wind-api.git"
+  },
+  "keywords": [
+    "aviation",
+    "api",
+    "wind",
+    "crosswind",
+    "calculator",
+    "runway",
+    "takeoff",
+    "landing",
+    "microservice"
+  ],
+  "author": "Jacinto Mba Cantero",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/jacmba/wind-api/issues"
+  },
+  "homepage": "https://github.com/jacmba/wind-api#readme"
+}
