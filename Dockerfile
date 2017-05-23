@@ -8,7 +8,7 @@ WORKDIR /usr/app
 COPY . /usr/app
 
 # Install dependencies
-RUN npm Install
+RUN npm install
 
 # Publish HTTP port
 EXPOSE 3000
