@@ -1,6 +1,6 @@
 'use strict';
 
-const RADIANS = 0.0174533;
+let angleDelta = require('../util/angleDelta');
 
 class Crosswind {
   //----------------------------------------------------------------------------
@@ -12,7 +12,7 @@ class Crosswind {
    * 
   */
   calculate(rwyHdg, windHdg, windSpd) {
-    let alpha = Math.abs(rwyHdg - windHdg) * RADIANS;
+    let alpha = angleDelta(rwyHdg, windHdg);
     let speed = windSpd * Math.sin(alpha);
 
     return {
