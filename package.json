@@ -4,6 +4,7 @@
   "description": "Aviation wind component calculator",
   "main": "src/index.js",
   "scripts": {
+    "start": "node src/index.js",
     "test": "nodemodules/mocha/bin/mocha test"
   },
   "repository": {
