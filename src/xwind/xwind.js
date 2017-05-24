@@ -20,7 +20,7 @@ class Crosswind {
     let speed = windSpd * Math.sin(alpha * constants.RADIANS);
 
     return {
-      speed: speed.toFixed(2),
+      speed: Number(speed.toFixed(2)),
       heading: alpha
     };
   }
