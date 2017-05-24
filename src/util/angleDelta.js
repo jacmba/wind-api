@@ -1,7 +1,5 @@
 'use strict';
 
-const RADIANS = 0.0174533;
-
 //------------------------------------------------------------------------------
 /**
  * Calculate difference between 2 angles
@@ -10,7 +8,7 @@ const RADIANS = 0.0174533;
  * @returns {number}
  */
 function angleDelta(alpha, beta) {
-  return Math.abs(alpha - beta) * RADIANS;
+  return Math.abs(alpha - beta);
 }
 
 module.exports = angleDelta;
