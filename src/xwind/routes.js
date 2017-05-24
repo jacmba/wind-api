@@ -30,6 +30,9 @@ class CrosswindRoutes {
     console.log(`Requested cross wind from ${req.ip}`);
 
     try {
+      if(!req.query.rwy_hdg || !req.query.wind_hdg || !req.query.wind_spd) {
+        throw 'Missing parameters!';
+      }
       rwyHdg = Number(req.query.rwy_hdg);
       windHdg = Number(req.query.wind_hdg);
       windSpd = Number(req.query.wind_spd);
