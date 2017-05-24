@@ -1,0 +1,17 @@
+{
+  "curly": true,
+  "eqeqeq": true,
+  "esversion": 6,
+  "forin": true,
+  "maxparams": 3,
+  "strict": true,
+  "undef": true,
+  "unused": true,
+  "node": true,
+  "globals": {
+    "describe": true,
+    "after": true,
+    "it": true,
+    "before": true
+  }
+}
