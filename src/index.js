@@ -8,14 +8,20 @@
 // Declare dependencies
 let Express = require('express');
 let XwindCtrl = require('./xwind/routes');
+let HwindCtrl = require('./hwind/routes');
 
 // Instantiate objects
 let app = Express();
 let xCrtl = new XwindCtrl();
+let hCtrl = new HwindCtrl();
 
 // Setup routes
 app.get('/xwind', (req, res) => {
   xCrtl.getXwind(req, res);
+});
+
+app.get('/hwind', (req, res) => {
+  hCtrl.getHwind(req, res);
 });
 
 // Setup server port
