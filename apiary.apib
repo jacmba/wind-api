@@ -1,80 +1,46 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: http://wind.api.jazbelt.net/
 
-# windapi
+# Wind API
 
 Polls is a simple API allowing consumers to view polls and vote in them.
 
-## Questions Collection [/questions]
+## Cross wind Collection [/xwind(?rwy_hdg,wind_hdg,wind_spd)]
 
-### List All Questions [GET]
+### Calculate cross wind [GET]
+
++ Parameters
+
+    + rwy_hdg (number, required) - Runway heading
+    + wind_hdg (number, required) - Wind heading
+    + wind_spd (number, required) - Wind speed
 
 + Response 200 (application/json)
-
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
-        ]
-
-### Create a New Question [POST]
-
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
-
-+ Request (application/json)
-
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /questions/2
+    
 
     + Body
-
+    
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+                "speed": 16.9,
+                "heading": 25
+            }
+
+## Head wind Collection [/hwind(?rwy_hdg,wind_hdg,wind_spd)]
+
+### Calculate head wind [GET]
+
++ Parameters
+
+    + rwy_hdg (number, required) - Runway heading
+    + wind_hdg (number, required) - Wind heading
+    + wind_spd (number, required) - Wind speed
+
++ Response 200 (application/json)
+    
+
+    + Body
+    
+            {
+                "speed": 36.25,
+                "heading": 25
             }
