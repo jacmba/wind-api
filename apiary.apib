@@ -5,15 +5,15 @@ HOST: http://wind.api.jazbelt.net/
 
 Polls is a simple API allowing consumers to view polls and vote in them.
 
-## Cross wind Collection [/xwind(?rwy_hdg,wind_hdg,wind_spd)]
+## Cross wind Collection [/xwind{?rwy_hdg,wind_hdg,wind_spd}]
 
 ### Calculate cross wind [GET]
 
 + Parameters
 
-    + rwy_hdg (number, required) - Runway heading
-    + wind_hdg (number, required) - Wind heading
-    + wind_spd (number, required) - Wind speed
+    + rwy_hdg: 28 (number, required) - Runway heading
+    + wind_hdg: 30 (number, required) - Wind heading
+    + wind_spd: 15 (number, required) - Wind speed
 
 + Response 200 (application/json)
     
@@ -25,15 +25,15 @@ Polls is a simple API allowing consumers to view polls and vote in them.
                 "heading": 25
             }
 
-## Head wind Collection [/hwind(?rwy_hdg,wind_hdg,wind_spd)]
+## Head wind Collection [/hwind{?rwy_hdg,wind_hdg,wind_spd}]
 
 ### Calculate head wind [GET]
 
 + Parameters
 
-    + rwy_hdg (number, required) - Runway heading
-    + wind_hdg (number, required) - Wind heading
-    + wind_spd (number, required) - Wind speed
+    + rwy_hdg: 28 (number, required) - Runway heading
+    + wind_hdg: 30 (number, required) - Wind heading
+    + wind_spd: 15 (number, required) - Wind speed
 
 + Response 200 (application/json)
     
